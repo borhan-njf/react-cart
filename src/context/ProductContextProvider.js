@@ -10,10 +10,8 @@ export default function ProductContextProvider({ children }) {
   useEffect(() => {
     const fetchApi = async () => {
       setProducts(await getProducts());
-      console.log("products", products);
     };
 
-    // console.log("dfgdg");
     fetchApi();
   }, []);
 
