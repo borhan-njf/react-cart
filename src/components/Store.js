@@ -7,6 +7,7 @@ import { ProductContext } from "../context/ProductContextProvider";
 export default function Store() {
   const products = useContext(ProductContext);
   return (
+    
     <div
       style={{
         display: "flex",

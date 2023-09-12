@@ -13,15 +13,21 @@ export default function ProductDetail() {
     fetchApi();
   }, []);
 
-  const { image, title, description, price } = singleProduct;
+  const { image, title, description, price, category } = singleProduct;
 
   return (
     <div>
       <img alt="product" src={image} style={{ width: "300px" }} />
-      <h3>{title}</h3>
-      <p>{description}</p>
-      <p>price : {price}</p>
-      <Link to={`/products`}>back to home</Link>
+      <div>
+        <h3>{title}</h3>
+        <p>{description}</p>
+        <p>
+          <span>Category: </span>
+          {category}
+        </p>
+        <p>price : {price}000$</p>
+        <Link to={`/products`}>back to products</Link>
+      </div>
     </div>
   );
 }
